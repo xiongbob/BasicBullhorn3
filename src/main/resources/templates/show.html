@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Subject</title>
+</head>
+<body>
+<a href="/add">Show All Message</a><br />
+    Subject :<span th:text="${message.subject}"></span><br />
+    Content :<span th:text="${message.content}"></span><br />
+    Posteddate :<span th:text="${message.posteddate}"></span><br />
+    Sentby :<span th:text="${message.sentby}"></span><br />
+    <a th:href="@{/delete/{id}(id=${message.id})}">Delete this message</a>
+
+</body>
+</html>
